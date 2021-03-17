@@ -108,91 +108,18 @@
 	// Move nav content on breakpoint change.
 	var $navContent = $nav.children();
 
-	breakpoints.on('>medium', function () {
-
-		// NavPanel -> Nav.
-		$navContent.appendTo($nav);
-
-		// Flip icon classes.
-		$nav.find('.icons, .icon')
-			.removeClass('alt');
-
-	});
-
-	breakpoints.on('<=medium', function () {
-
+	breakpoints.on('>=xxsmall', function () {
 		// Nav -> NavPanel.
 		$navContent.appendTo($navPanelInner);
-
 		// Flip icon classes.
 		$navPanelInner.find('.icons, .icon')
 			.addClass('alt');
 
 	});
 
-	// Hack: Disable transitions on WP.
-	if (browser.os == 'wp'
-		&& browser.osVersion < 10)
-		$navPanel
-			.css('transition', 'none');
 
 	// Intro.
 	var $intro = $('#intro');
 
-	if ($intro.length > 0) {
-
-		// Hack: Fix flex min-height on IE.
-		if (browser.name == 'ie') {
-			$window.on('resize.ie-intro-fix', function () {
-
-				var h = $intro.height();
-
-				if (h > $window.height())
-					$intro.css('height', 'auto');
-				else
-					$intro.css('height', h);
-
-			}).trigger('resize.ie-intro-fix');
-		}
-
-		// Hide intro on scroll (> small).
-		breakpoints.on('>small', function () {
-
-			$main.unscrollex();
-
-			$main.scrollex({
-				mode: 'bottom',
-				top: '25vh',
-				bottom: '-50vh',
-				enter: function () {
-					$intro.addClass('hidden');
-				},
-				leave: function () {
-					$intro.removeClass('hidden');
-				}
-			});
-
-		});
-
-		// Hide intro on scroll (<= small).
-		breakpoints.on('<=small', function () {
-
-			$main.unscrollex();
-
-			$main.scrollex({
-				mode: 'middle',
-				top: '15vh',
-				bottom: '-15vh',
-				enter: function () {
-					$intro.addClass('hidden');
-				},
-				leave: function () {
-					$intro.removeClass('hidden');
-				}
-			});
-
-		});
-
-	}
 
 })(jQuery);
