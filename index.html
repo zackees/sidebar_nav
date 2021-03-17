@@ -28,10 +28,18 @@
 	<div id="wrapper" class="fade-in">
 		<!-- Header -->
 		<!-- Nav -->
-		<nav id="nav"></nav>
-		<script>
-			document.getElementById("nav").innerHTML = BuildNavigationHtml(selected_element = "Disclosures")
-		</script>
+		<nav id="nav">
+			<ul class="links">
+	  		<li class="active"><a href="#">Disclosures</a></li>
+				<li><a href="#">Sargon of Akkad</a></li>
+				<li><a href="#">Scott Adams</a></li>
+				<li><a href="#">Dave Rubin</a></li>
+				<li><a href="#">Tucker Carlson</a></li>
+			</ul>
+			<ul class="icons">
+	  		<li><a href="https://twitter.com/perpetualmaniac" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+			</ul>
+		</nav>
 
 		<!-- Main -->
 		<div id="main">
@@ -49,9 +57,6 @@
 	<script src="assets/js/breakpoints.min.js"></script>
 	<script src="assets/js/util.js"></script>
 	<script src="assets/js/main.js"></script>
-	<script src="/site.js"></script>
-
-	<!-- script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script -->
 </body>
 
 </html>
