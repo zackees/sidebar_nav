@@ -75,15 +75,7 @@
 			// a whole bunch of rendering problems.
 			off();
 		});
-
-		$window
-			.off('load._parallax resize._parallax')
-			.on('load._parallax resize._parallax', function () {
-				$window.trigger('scroll');
-			});
-
-		return $(this);
-
+  	return $(this);
 	};
 
 	// Play initial animations on page load.
