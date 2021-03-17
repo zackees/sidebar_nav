@@ -35,19 +35,12 @@
 
 		$this.each(function () {
 			var $t = $(this),
-				$bg = $('<div class="bg"></div>').appendTo($t),
-				on, off;
-			off = function () {
-				$bg
+				$bg = $('<div class="bg"></div>').appendTo($t);
+			$bg
 					.addClass('fixed')
 					.css('transform', 'none');
-				$window
+			$window
 					.off('scroll._parallax');
-			};
-			// HACK - JUST TURN THE WHOLE SCROLL INTERFACE THING OFF.
-			// It doesn't work very well for a complex page and causes
-			// a whole bunch of rendering problems.
-			off();
 		});
   	return $(this);
 	};
