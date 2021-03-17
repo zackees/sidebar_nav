@@ -70,28 +70,10 @@
 				$window
 					.off('scroll._parallax');
 			};
-
 			// HACK - JUST TURN THE WHOLE SCROLL INTERFACE THING OFF.
 			// It doesn't work very well for a complex page and causes
 			// a whole bunch of rendering problems.
 			off();
-			/*
-			// Disable parallax on ..
-			if (browser.name == 'ie'			// IE
-				|| browser.name == 'edge'			// Edge
-				|| window.devicePixelRatio > 1		// Retina/HiDPI (= poor performance)
-				|| browser.mobile)					// Mobile devices
-				off();
-
-			// Enable everywhere else.
-			else {
-
-				breakpoints.on('>large', on);
-				breakpoints.on('<=large', off);
-
-			}
-			*/
-
 		});
 
 		$window
