@@ -33,9 +33,6 @@
 		var $window = $(window),
 			$this = $(this);
 
-		if (!intensity)
-			intensity = 0.25;
-
 		$this.each(function () {
 			var $t = $(this),
 				$bg = $('<div class="bg"></div>').appendTo($t),
