@@ -65,8 +65,8 @@
 
 			#wrapper > .bg.fixed {
 				position: fixed;
-				width: 100vw;
-				height: 100vh;
+				width: 100%;
+				height: 100%;
 			}
 
 		#wrapper.fade-in:before {
@@ -318,9 +318,6 @@
 			padding-left: 0;
 		}
 
-			#navPanel .links li {
-				border-top: solid 2px #eeeeee;
-			}
 
 				#navPanel .links li a {
 					border-bottom: 0;
