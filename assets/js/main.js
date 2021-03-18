@@ -37,12 +37,12 @@
 			var $t = $(this),
 				$bg = $('<div class="bg"></div>').appendTo($t);
 			$bg
-					.addClass('fixed')
-					.css('transform', 'none');
+				.addClass('fixed')
+				.css('transform', 'none');
 			$window
-					.off('scroll._parallax');
+				.off('scroll._parallax');
 		});
-  	return $(this);
+		return $(this);
 	};
 
 	// Play initial animations on page load.
