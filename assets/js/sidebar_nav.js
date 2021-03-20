@@ -197,8 +197,7 @@
 })(jQuery);
 
 
-(function ($) {
-
+function init_navpanel() {
 	var $window = $(window),
 		$body = $('body'),
 		$wrapper = $('#wrapper'),
@@ -265,4 +264,8 @@
 	// Flip icon classes.
 	$navPanelInner.find('.icons, .icon')
 		.addClass('alt');
+}
+
+(function ($) {
+	init_navpanel()
 })(jQuery);
