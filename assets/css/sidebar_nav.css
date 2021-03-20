@@ -1,53 +1,6 @@
 @import url(fontawesome-all.min.css);
 
 
-
-/*
-	Massively by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-*/
-
-
-/* Type */
-
-
-
-/* Row */
-
-
-
-/* Box */
-
-/* Button */
-
-
-/* Form */
-
-/* Icon */
-
-
-/* Image */
-
-
-/* Actions */
-
-
-/* Icons */
-
-
-/* List */
-
-
-/* Section/Article */
-
-/* Table */
-
-/* Pagination */
-
-
-/* Wrapper */
-
   /* This is needed because of color control in the scene */
 	#wrapper {
 		-moz-transition: opacity 0.5s ease;
@@ -59,36 +12,36 @@
 		overflow: hidden;
 	}
 
-		#wrapper > .bg {
-			z-index: -1;
-		}
+	#wrapper > .bg {
+		z-index: -1;
+	}
 
-			#wrapper > .bg.fixed {
-				position: fixed;
-				width: 100%;
-				height: 100%;
-			}
+	#wrapper > .bg.fixed {
+		position: fixed;
+		width: 100%;
+		height: 100%;
+	}
 
-		#wrapper.fade-in:before {
-			pointer-events: none;
-			-moz-transition: opacity 1s ease-in-out;
-			-webkit-transition: opacity 1s ease-in-out;
-			-ms-transition: opacity 1s ease-in-out;
-			transition: opacity 1s ease-in-out;
-			-moz-transition-delay: 0.75s;
-			-webkit-transition-delay: 0.75s;
-			-ms-transition-delay: 0.75s;
-			transition-delay: 0.75s;
-			background: #1e252d;
-			content: '';
-			display: block;
-			height: 100%;
-			left: 0;
-			opacity: 1;
-			position: fixed;
-			top: 0;
-			width: 100%;
-		}
+	#wrapper.fade-in:before {
+		pointer-events: none;
+		-moz-transition: opacity 1s ease-in-out;
+		-webkit-transition: opacity 1s ease-in-out;
+		-ms-transition: opacity 1s ease-in-out;
+		transition: opacity 1s ease-in-out;
+		-moz-transition-delay: 0.75s;
+		-webkit-transition-delay: 0.75s;
+		-ms-transition-delay: 0.75s;
+		transition-delay: 0.75s;
+		background: #1e252d;
+		content: '';
+		display: block;
+		height: 100%;
+		left: 0;
+		opacity: 1;
+		position: fixed;
+		top: 0;
+		width: 100%;
+	}
 
 /* Intro */
 
@@ -162,9 +115,6 @@
 	}
 
 
-/* Footer */
-
-
 /* Nav Panel */
 
 	#navPanelToggle {
@@ -187,47 +137,45 @@
 		z-index: 10001;
 	}
 
-		#navPanelToggle:before {
-			-moz-osx-font-smoothing: grayscale;
-			-webkit-font-smoothing: antialiased;
-			display: inline-block;
-			font-style: normal;
-			font-variant: normal;
-			text-rendering: auto;
-			line-height: 1;
-			text-transform: none !important;
-			font-family: 'Font Awesome 5 Free';
-			font-weight: 900;
-		}
+	#navPanelToggle:before {
+		-moz-osx-font-smoothing: grayscale;
+		-webkit-font-smoothing: antialiased;
+		display: inline-block;
+		font-style: normal;
+		font-variant: normal;
+		text-rendering: auto;
+		line-height: 1;
+		text-transform: none !important;
+		font-family: 'Font Awesome 5 Free';
+		font-weight: 900;
+	}
 
-		#navPanelToggle:before {
-			content: '\f0c9';
-			margin-right: 0.9rem;
-		}
+	#navPanelToggle:before {
+		content: '\f0c9';
+		margin-right: 0.9rem;
+	}
 
-		#navPanelToggle.alt {
-			background-color: rgba(255, 255, 255, 0.875);
-			box-shadow: 0 0.125rem 0.75rem 0 rgba(30, 37, 45, 0.25);
-			color: #212931;
-		}
+	#navPanelToggle.alt {
+		background-color: rgba(255, 255, 255, 0.875);
+		box-shadow: 0 0.125rem 0.75rem 0 rgba(30, 37, 45, 0.25);
+		color: #212931;
+	}
 
-			#navPanelToggle.alt:hover {
-				background-color: #ffffff;
-			}
+	#navPanelToggle.alt:hover {
+		background-color: #ffffff;
+	}
 
 
+	#navPanelToggle {
+		display: block;
+	}
+
+	@media screen and (max-width: 736px) {
 		#navPanelToggle {
-			display: block;
+			font-size: 2.0rem;
+			padding: 0.25rem 1rem;
 		}
-
-		@media screen and (max-width: 736px) {
-
-			#navPanelToggle {
-				font-size: 2.0rem;
-				padding: 0.25rem 1rem;
-			}
-
-		}
+	}
 
 	#navPanel {
 		-moz-transform: translateX(20rem);
@@ -255,66 +203,63 @@
 		z-index: 10002;
 	}
 
+	#navPanel .close {
+		text-decoration: none;
+		-moz-transition: color 0.2s ease-in-out;
+		-webkit-transition: color 0.2s ease-in-out;
+		-ms-transition: color 0.2s ease-in-out;
+		transition: color 0.2s ease-in-out;
+		-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+		border: 0;
+		color: #909498;
+		cursor: pointer;
+		display: block;
+		height: 3.25rem;
+		line-height: 3.25rem;
+		padding-right: 1.25rem;
+		position: absolute;
+		right: 0;
+		text-align: right;
+		top: 0;
+		vertical-align: middle;
+		width: 7rem;
+	}
+	#navPanel .close:before {
+		-moz-osx-font-smoothing: grayscale;
+		-webkit-font-smoothing: antialiased;
+		display: inline-block;
+		font-style: normal;
+		font-variant: normal;
+		text-rendering: auto;
+		line-height: 1;
+		text-transform: none !important;
+		font-family: 'Font Awesome 5 Free';
+		font-weight: 900;
+	}
+	#navPanel .close:before {
+		content: '\f00d';
+		font-size: 1.25rem;
+	}
+	#navPanel .close:hover {
+		color: #212931;
+	}
+	@media screen and (max-width: 736px) {
 		#navPanel .close {
-			text-decoration: none;
-			-moz-transition: color 0.2s ease-in-out;
-			-webkit-transition: color 0.2s ease-in-out;
-			-ms-transition: color 0.2s ease-in-out;
-			transition: color 0.2s ease-in-out;
-			-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-			border: 0;
-			color: #909498;
-			cursor: pointer;
-			display: block;
-			height: 3.25rem;
-			line-height: 3.25rem;
-			padding-right: 1.25rem;
-			position: absolute;
-			right: 0;
-			text-align: right;
-			top: 0;
-			vertical-align: middle;
-			width: 7rem;
+			height: 4rem;
+			line-height: 4rem;
 		}
-			#navPanel .close:before {
-				-moz-osx-font-smoothing: grayscale;
-				-webkit-font-smoothing: antialiased;
-				display: inline-block;
-				font-style: normal;
-				font-variant: normal;
-				text-rendering: auto;
-				line-height: 1;
-				text-transform: none !important;
-				font-family: 'Font Awesome 5 Free';
-				font-weight: 900;
-			}
-			#navPanel .close:before {
-				content: '\f00d';
-				font-size: 1.25rem;
-			}
-			#navPanel .close:hover {
-				color: #212931;
-			}
-			@media screen and (max-width: 736px) {
-				#navPanel .close {
-					height: 4rem;
-					line-height: 4rem;
-				}
-			}
+	}
+	#navPanel {
+		display: block;
+	}
+	@media screen and (max-width: 736px) {
 		#navPanel {
-			display: block;
+			padding: 2.5rem 1.75rem;
 		}
-		@media screen and (max-width: 736px) {
-			#navPanel {
-				padding: 2.5rem 1.75rem;
-			}
-		}
-
-
+	}
 	body.is-navPanel-visible #wrapper {
 		opacity: 0.5; /* Controls opacity of canvas below */
 	}
-
 	/* Physically slides the nav into view */
 	body.is-navPanel-visible #navPanel {
 		-moz-transform: translateX(0);
