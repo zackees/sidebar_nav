@@ -2,7 +2,7 @@
 
 
   /* This is needed because of color control in the scene */
-	#wrapper {
+	#navpanel_opacity_wrapper {
 		-moz-transition: opacity 0.5s ease;
 		-webkit-transition: opacity 0.5s ease;
 		-ms-transition: opacity 0.5s ease;
@@ -174,7 +174,7 @@
 			padding: 2.5rem 1.75rem;
 		}
 	}
-	body.is-navPanel-visible #wrapper {
+	body.is-navPanel-visible #navpanel_opacity_wrapper {
 		opacity: 0.5; /* Controls opacity of canvas below */
 	}
 	/* Physically slides the nav into view */

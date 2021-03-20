@@ -219,7 +219,7 @@ function init_navpanel(menu_name, html) {
 	__sidebar_initialized = true
 	var $window = $(window),
 		$body = $('body'),
-		$wrapper = $('#wrapper'),
+		$wrapper = $('#navpanel_opacity_wrapper'),
 		//$nav = $('#nav'),
 		$main = $('#main'),
 		$navPanelToggle, $navPanel, $navPanelInner;
