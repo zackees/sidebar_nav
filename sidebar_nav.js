@@ -214,6 +214,7 @@ function set_navpanel(html) {
 var __sidebar_initialized = false
 function init_navpanel(menu_name, html) {
 	if (__sidebar_initialized) {
+		console.log('init_navpanel(...) already called. skipping.')
 		return
 	}
 	__sidebar_initialized = true
