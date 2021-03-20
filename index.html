@@ -81,12 +81,15 @@
 			</ul>`
 		init_navpanel("Menu", html)
 
-		// Then after a 5 second delay change the text in the nav panel.
+		// Test that this second init_navpanl has no effect.
+		init_navpanel("Something else", '')
+
+		// Then after a 3 second delay change the text in the nav panel.
 		setTimeout(function() {
 			let html = ''
 			for (i = 0; i < 100; ++i) { html += '<a href="#">test</a><br>' }
 			set_navpanel(html)
-		}, 5000)
+		}, 3000)
 	</script>
 
 </body>
