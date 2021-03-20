@@ -220,7 +220,7 @@ function init_sidebar_nav(menu_name, html) {
 	__sidebar_initialized = true
 	var $window = $(window),
 		$body = $('body'),
-		$wrapper = $('#navpanel_opacity_wrapper'),
+		$wrapper = $('#side_panel_opacity_wrapper'),
 		//$nav = $('#__nav'),
 		$main = $('#main'),
 		$navPanel, $navPanelInner;

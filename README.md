@@ -23,7 +23,7 @@ makes a dead simple API to use this sidebar nav panel.
 
 <body>
 	<!-- Wrapper -->
-	<div id="navpanel_opacity_wrapper">
+	<div id="side_panel_opacity_wrapper">
 		<p>Tests that double initializing is ok</p>
 		<p>The test passes if the navigation panel says "Menu"</p>
 		<p>The test fails if the navigation says anything else or is missing.</p>
@@ -58,8 +58,8 @@ makes a dead simple API to use this sidebar nav panel.
   * The following Javascript functions are available:
     * `init_sidebar_nav(title_str, html_str)`
     * `set_sidebar_nav(html_str)`
-  * Your html document must include a div with the id as `navpanel_opacity_wrapper`.
-    * Example: 	<div id="navpanel_opacity_wrapper">My test</div>
+  * Your html document must include a div with the id as `side_panel_opacity_wrapper`.
+    * Example: 	<div id="side_panel_opacity_wrapper">My test</div>
       * In this example the words "My test" will have a slick opacity effect applied. Other divs will not.
 
 # Test
