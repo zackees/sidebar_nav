@@ -211,7 +211,12 @@ function set_navpanel(html) {
 		.addClass('alt');
 }
 
+var __sidebar_initialized = false
 function init_navpanel(menu_name, html) {
+	if (__sidebar_initialized) {
+		return
+	}
+	__sidebar_initialized = true
 	var $window = $(window),
 		$body = $('body'),
 		$wrapper = $('#wrapper'),
