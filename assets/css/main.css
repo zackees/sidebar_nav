@@ -159,22 +159,6 @@
 				visibility: visible;
 			}
 
-		body.is-preload #intro {
-			-moz-transform: translateY(2rem);
-			-webkit-transform: translateY(2rem);
-			-ms-transform: translateY(2rem);
-			transform: translateY(2rem);
-			opacity: 0;
-		}
-
-			body.is-preload #intro:not(.hidden) + #header + #nav {
-				-moz-transform: translateY(4rem);
-				-webkit-transform: translateY(4rem);
-				-ms-transform: translateY(4rem);
-				transform: translateY(4rem);
-				opacity: 0;
-			}
-
 
 /* Header */
 
