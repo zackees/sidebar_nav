@@ -83,7 +83,9 @@
 
 		// Then after a 5 second delay change the text in the nav panel.
 		setTimeout(function() {
-			set_navpanel('<a href="#">test</a>')
+			let html = ''
+			for (i = 0; i < 100; ++i) { html += '<a href="#">test</a><br>' }
+			set_navpanel(html)
 		}, 5000)
 		
 	</script>
