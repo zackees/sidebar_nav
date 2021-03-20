@@ -12,12 +12,9 @@
 
 		// Multiple elements?
 		if (this.length > 1) {
-
 			for (var i = 0; i < this.length; i++)
 				$(this[i]).panel(userConfig);
-
 			return $this;
-
 		}
 
 		// Vars.
@@ -29,73 +26,55 @@
 
 		// Config.
 		config = $.extend({
-
 			// Delay.
 			delay: 0,
-
 			// Hide panel on link click.
 			hideOnClick: false,
-
 			// Hide panel on escape keypress.
 			hideOnEscape: false,
-
 			// Hide panel on swipe.
 			hideOnSwipe: false,
-
 			// Reset scroll position on hide.
 			resetScroll: false,
-
 			// Reset forms on hide.
 			resetForms: false,
-
 			// Side of viewport the panel will appear.
 			side: null,
-
 			// Target element for "class".
 			target: $this,
-
 			// Class to toggle.
 			visibleClass: 'visible'
-
 		}, userConfig);
 
 		// Expand "target" if it's not a jQuery object already.
 		if (typeof config.target != 'jQuery')
 			config.target = $(config.target);
-
 		// Panel.
-
 		// Methods.
 		$this._hide = function (event) {
-
 			// Already hidden? Bail.
 			if (!config.target.hasClass(config.visibleClass))
 				return;
-
 			// If an event was provided, cancel it.
 			if (event) {
-
 				event.preventDefault();
 				event.stopPropagation();
-
 			}
-
 			// Hide.
 			config.target.removeClass(config.visibleClass);
 			// Post-hide stuff.
 			window.setTimeout(function () {
 				// Reset scroll position.
-				if (config.resetScroll)
+				if (config.resetScroll) {
 					$this.scrollTop(0);
-
+				}
 				// Reset forms.
-				if (config.resetForms)
+				if (config.resetForms) {
 					$this.find('form').each(function () {
 						this.reset();
 					});
-
+				}
 			}, config.delay);
-
 		};
 		// Vendor fixes.
 		$this
@@ -227,25 +206,7 @@
 		$main = $('#main'),
 		$navPanelToggle, $navPanel, $navPanelInner;
 
-	/**
-	 * Applies parallax scrolling to an element's background image.
-	 * @return {jQuery} jQuery object.
-	 */
-	$.fn._parallax = function (intensity) {
-		var $window = $(window),
-			$this = $(this);
 
-		$this.each(function () {
-			var $t = $(this),
-				$bg = $('<div class="bg"></div>').appendTo($t);
-			$bg
-				.addClass('fixed')
-				.css('transform', 'none');
-			$window
-				.off('scroll._parallax');
-		});
-		return $(this);
-	};
 
 	// Play initial animations on page load.
 	/*
@@ -258,9 +219,6 @@
 
 	// Scrolly.
 	$('.scrolly').scrolly();
-
-	// Background.
-	$wrapper._parallax(0.925);
 
 	// Nav Panel.
 
