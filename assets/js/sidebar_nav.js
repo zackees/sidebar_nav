@@ -217,18 +217,20 @@
 	});
 	*/
 
+
+
 	// Scrolly.
-	$('.scrolly').scrolly();
+	//$('.scrolly').scrolly();
 
 	// Nav Panel.
 
 	// Toggle.
 	$navPanelToggle = $(
-		'<a href="#navPanel" id="navPanelToggle"></a>'
+		'<a href="#navPanel" id="navPanelToggle">Menu</a>'
 	)
 		.appendTo($wrapper);
 
-
+	$navPanelToggle.addClass('alt');
 
 	// Panel.
 	$navPanel = $(
