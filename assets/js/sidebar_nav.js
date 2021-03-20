@@ -1,22 +1,17 @@
 (function ($) {
-
 	/**
 	 * Generate an indented list of links from a nav. Meant for use with panel().
 	 * @return {jQuery} jQuery object.
 	 */
 	$.fn.navList = function () {
-
 		var $this = $(this);
 		$a = $this.find('a'),
 			b = [];
-
 		$a.each(function () {
-
 			var $this = $(this),
 				indent = Math.max(0, $this.parents('li').length - 1),
 				href = $this.attr('href'),
 				target = $this.attr('target');
-
 			b.push(
 				'<a ' +
 				'class="link depth-' + indent + '"' +
@@ -29,9 +24,7 @@
 			);
 
 		});
-
 		return b.join('');
-
 	};
 
 	/**
@@ -117,10 +110,8 @@
 
 			// Hide.
 			config.target.removeClass(config.visibleClass);
-
 			// Post-hide stuff.
 			window.setTimeout(function () {
-
 				// Reset scroll position.
 				if (config.resetScroll)
 					$this.scrollTop(0);
@@ -134,134 +125,99 @@
 			}, config.delay);
 
 		};
-
 		// Vendor fixes.
 		$this
 			.css('-ms-overflow-style', '-ms-autohiding-scrollbar')
 			.css('-webkit-overflow-scrolling', 'touch');
-
 		// Hide on click.
 		if (config.hideOnClick) {
-
 			$this.find('a')
 				.css('-webkit-tap-highlight-color', 'rgba(0,0,0,0)');
-
 			$this
 				.on('click', 'a', function (event) {
-
 					var $a = $(this),
 						href = $a.attr('href'),
 						target = $a.attr('target');
-
 					if (!href || href == '#' || href == '' || href == '#' + id)
 						return;
-
 					// Cancel original event.
 					event.preventDefault();
 					event.stopPropagation();
-
 					// Hide panel.
 					$this._hide();
 
 					// Redirect to href.
 					window.setTimeout(function () {
-
 						if (target == '_blank')
 							window.open(href);
 						else
 							window.location.href = href;
-
 					}, config.delay + 10);
 
 				});
-
 		}
 
 		// Event: Touch stuff.
 		$this.on('touchstart', function (event) {
-
 			$this.touchPosX = event.originalEvent.touches[0].pageX;
 			$this.touchPosY = event.originalEvent.touches[0].pageY;
-
 		})
 
 		$this.on('touchmove', function (event) {
-
 			if ($this.touchPosX === null
 				|| $this.touchPosY === null)
 				return;
-
 			var diffX = $this.touchPosX - event.originalEvent.touches[0].pageX,
 				diffY = $this.touchPosY - event.originalEvent.touches[0].pageY,
 				th = $this.outerHeight(),
 				ts = ($this.get(0).scrollHeight - $this.scrollTop());
-
 			// Hide on swipe?
 			if (config.hideOnSwipe) {
-
 				var result = false,
 					boundary = 20,
 					delta = 50;
-
 				switch (config.side) {
-
 					case 'left':
 						result = (diffY < boundary && diffY > (-1 * boundary)) && (diffX > delta);
 						break;
-
 					case 'right':
 						result = (diffY < boundary && diffY > (-1 * boundary)) && (diffX < (-1 * delta));
 						break;
-
 					case 'top':
 						result = (diffX < boundary && diffX > (-1 * boundary)) && (diffY > delta);
 						break;
-
 					case 'bottom':
 						result = (diffX < boundary && diffX > (-1 * boundary)) && (diffY < (-1 * delta));
 						break;
-
 					default:
 						break;
-
 				}
 
 				if (result) {
-
 					$this.touchPosX = null;
 					$this.touchPosY = null;
 					$this._hide();
-
 					return false;
-
 				}
-
 			}
 
 			// Prevent vertical scrolling past the top or bottom.
 			if (($this.scrollTop() < 0 && diffY < 0)
 				|| (ts > (th - 2) && ts < (th + 2) && diffY > 0)) {
-
 				event.preventDefault();
 				event.stopPropagation();
-
 			}
 
 		});
-
 		// Event: Prevent certain events inside the panel from bubbling.
 		$this.on('click touchend touchstart touchmove', function (event) {
 			event.stopPropagation();
 		});
-
 		// Event: Hide panel if a child anchor tag pointing to its ID is clicked.
 		$this.on('click', 'a[href="#' + id + '"]', function (event) {
-
 			event.preventDefault();
 			event.stopPropagation();
-
 			config.target.removeClass(config.visibleClass);
-
 		});
 
 		// Body.
@@ -273,30 +229,20 @@
 
 		// Event: Toggle.
 		$body.on('click', 'a[href="#' + id + '"]', function (event) {
-
 			event.preventDefault();
 			event.stopPropagation();
-
 			config.target.toggleClass(config.visibleClass);
-
 		});
 
 		// Window.
-
 		// Event: Hide on ESC.
 		if (config.hideOnEscape)
 			$window.on('keydown', function (event) {
-
 				if (event.keyCode == 27)
 					$this._hide(event);
-
 			});
-
 		return $this;
-
 	};
-
-
 })(jQuery);
 
 
@@ -309,7 +255,7 @@
 		$main = $('#main'),
 		$navPanelToggle, $navPanel, $navPanelInner;
 
-    /**
+	/**
 	 * Applies parallax scrolling to an element's background image.
 	 * @return {jQuery} jQuery object.
 	 */
@@ -321,12 +267,12 @@
 			var $t = $(this),
 				$bg = $('<div class="bg"></div>').appendTo($t);
 			$bg
-					.addClass('fixed')
-					.css('transform', 'none');
+				.addClass('fixed')
+				.css('transform', 'none');
 			$window
-					.off('scroll._parallax');
+				.off('scroll._parallax');
 		});
-  	return $(this);
+		return $(this);
 	};
 
 	// Play initial animations on page load.
@@ -385,7 +331,7 @@
 	// Move nav content on breakpoint change.
 	var $navContent = $nav.children();
 	// Nav -> NavPanel.
-    $navContent.appendTo($navPanelInner);
+	$navContent.appendTo($navPanelInner);
 	// Flip icon classes.
 	$navPanelInner.find('.icons, .icon')
 		.addClass('alt');
