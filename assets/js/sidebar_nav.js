@@ -197,6 +197,20 @@
 })(jQuery);
 
 
+function set_navpanel(html) {
+	let $nav = $('#nav')
+	let $navPanel = $('#navPanel')
+	let $navPanelInner = $navPanel.children('nav')
+	$navPanelInner.empty()
+	$nav.html(html)
+	var $navContent = $nav.children();
+	// Nav -> NavPanel.
+	$navContent.appendTo($navPanelInner);
+	// Flip icon classes.
+	$navPanelInner.find('.icons, .icon')
+		.addClass('alt');
+}
+
 function init_navpanel(menu_name, html) {
 	var $window = $(window),
 		$body = $('body'),
@@ -204,11 +218,10 @@ function init_navpanel(menu_name, html) {
 		//$nav = $('#nav'),
 		$main = $('#main'),
 		$navPanelToggle, $navPanel, $navPanelInner;
-
 	$("#nav").remove()
 	$('#navPanel').remove()
 	$('#navPanelToggle').remove()
-	$nav = $('<nav id="nav"></nav>').html(html).appendTo($wrapper)
+	$nav = $('<nav id="nav"></nav>').appendTo($wrapper)
 	// Nav Panel.
 	// Toggle.
 	$navPanelToggle = $(
@@ -219,9 +232,8 @@ function init_navpanel(menu_name, html) {
 	// Panel.
 	$navPanel = $(
 		'<div id="navPanel">' +
-		'<nav>' +
-		'</nav>' +
-		'<a href="#navPanel" class="close"></a>' +
+		  '<nav></nav>' +
+		  '<a href="#navPanel" class="close"></a>' +
 		'</div>'
 	)
 		.appendTo($body)
@@ -235,21 +247,6 @@ function init_navpanel(menu_name, html) {
 			target: $body,
 			visibleClass: 'is-navPanel-visible'
 		});
-	// If there is no nav panel, then remove the gui elements.
-	// Otherwise an empty menu-gui will show.
-	if (document.getElementById('nav') == null) {
-		$('#navPanelToggle').remove();
-	} else {
-		// Get inner.
-		$navPanelInner = $navPanel.children('nav');
-
-		// Move nav content on breakpoint change.
-		var $navContent = $nav.children();
-		// Nav -> NavPanel.
-		$navContent.appendTo($navPanelInner);
-		// Flip icon classes.
-		$navPanelInner.find('.icons, .icon')
-			.addClass('alt');
-	}
+	set_navpanel(html)
 }
 
