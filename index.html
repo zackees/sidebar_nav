@@ -16,15 +16,7 @@
 	<div id="wrapper" class="fade-in">
 		<!-- Header -->
 		<!-- Nav -->
-		<nav id="nav">
-			<h3>Links</h3>
-			<ul class="links">
-				<li class="active"><a href="#">Sargon of Akkad</a></li>
-				<li><a href="#">Scott Adams</a></li>
-				<li><a href="#">Dave Rubin</a></li>
-				<li><a href="#">Tucker Carlson</a></li>
-			</ul>
-		</nav>
+		<nav id="nav"></nav>
 
 		<p>This is the beginning</p>
 		<p>&nbsp;</p>
@@ -84,8 +76,15 @@
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js"
 		integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 	<script src="assets/js/sidebar_nav.js"></script>
-	<script>
-		init_navpanel("Menu")
+	<script type="text/javascript">
+		let html = `<h3>Links</h3>
+			<ul class="links">
+				<li class="active"><a href="#">Sargon of Akkad</a></li>
+				<li><a href="#">Scott Adams</a></li>
+				<li><a href="#">Dave Rubin</a></li>
+				<li><a href="#">Tucker Carlson</a></li>
+			</ul>`
+		init_navpanel("Menu", html)
 	</script>
 
 </body>
