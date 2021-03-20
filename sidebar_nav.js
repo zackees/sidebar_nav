@@ -198,7 +198,7 @@
 
 
 function set_navpanel(html) {
-	let $nav = $('#nav')
+	let $nav = $('#__nav')
 	let $navPanel = $('#navPanel')
 	let $navPanelInner = $navPanel.children('nav')
 	$navPanelInner.empty()
@@ -220,16 +220,16 @@ function init_navpanel(menu_name, html) {
 	var $window = $(window),
 		$body = $('body'),
 		$wrapper = $('#navpanel_opacity_wrapper'),
-		//$nav = $('#nav'),
+		//$nav = $('#__nav'),
 		$main = $('#main'),
 		$navPanelToggle, $navPanel, $navPanelInner;
 	if (menu_name.length) {
 		menu_name = ' ' + menu_name
 	}	
-	$("#nav").remove()
+	$("#__nav").remove()
 	$('#navPanel').remove()
 	$('#navPanelToggle').remove()
-	$nav = $('<nav id="nav"></nav>').appendTo($wrapper)
+	$nav = $('<nav id="__nav"></nav>').appendTo($wrapper)
 	// Nav Panel.
 	// Toggle.
 	$navPanelToggle = $(
