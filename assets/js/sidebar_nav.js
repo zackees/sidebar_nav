@@ -207,8 +207,8 @@ function init_navpanel(menu_name, html) {
 
 	$("#nav").remove()
 	$('#navPanel').remove()
+	$('#navPanelToggle').remove()
 	$nav = $('<nav id="nav"></nav>').html(html).appendTo($wrapper)
-
 	// Nav Panel.
 	// Toggle.
 	$navPanelToggle = $(
@@ -239,17 +239,17 @@ function init_navpanel(menu_name, html) {
 	// Otherwise an empty menu-gui will show.
 	if (document.getElementById('nav') == null) {
 		$('#navPanelToggle').remove();
+	} else {
+		// Get inner.
+		$navPanelInner = $navPanel.children('nav');
+
+		// Move nav content on breakpoint change.
+		var $navContent = $nav.children();
+		// Nav -> NavPanel.
+		$navContent.appendTo($navPanelInner);
+		// Flip icon classes.
+		$navPanelInner.find('.icons, .icon')
+			.addClass('alt');
 	}
-
-	// Get inner.
-	$navPanelInner = $navPanel.children('nav');
-
-	// Move nav content on breakpoint change.
-	var $navContent = $nav.children();
-	// Nav -> NavPanel.
-	$navContent.appendTo($navPanelInner);
-	// Flip icon classes.
-	$navPanelInner.find('.icons, .icon')
-		.addClass('alt');
 }
 
