@@ -265,8 +265,4 @@
 	// Flip icon classes.
 	$navPanelInner.find('.icons, .icon')
 		.addClass('alt');
-
-	// Intro.
-	var $intro = $('#intro');
-
 })(jQuery);
