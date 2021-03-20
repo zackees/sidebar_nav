@@ -107,7 +107,6 @@
 
 	// Move nav content on breakpoint change.
 	var $navContent = $nav.children();
-
 	// Nav -> NavPanel.
     $navContent.appendTo($navPanelInner);
 	// Flip icon classes.
