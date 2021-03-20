@@ -9,7 +9,6 @@
 	var $window = $(window),
 		$body = $('body'),
 		$wrapper = $('#wrapper'),
-		$header = $('#header'),
 		$nav = $('#nav'),
 		$main = $('#main'),
 		$navPanelToggle, $navPanel, $navPanelInner;
@@ -55,16 +54,7 @@
 	)
 		.appendTo($wrapper);
 
-	// Change toggle styling once we've scrolled past the header.
-	$header.scrollex({
-		bottom: '5vh',
-		enter: function () {
-			$navPanelToggle.removeClass('alt');
-		},
-		leave: function () {
-			$navPanelToggle.addClass('alt');
-		}
-	});
+
 
 	// Panel.
 	$navPanel = $(
