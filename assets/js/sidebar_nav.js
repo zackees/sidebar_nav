@@ -218,6 +218,9 @@ function init_navpanel(menu_name, html) {
 		//$nav = $('#nav'),
 		$main = $('#main'),
 		$navPanelToggle, $navPanel, $navPanelInner;
+	if (menu_name.length) {
+		menu_name = ' ' + menu_name
+	}	
 	$("#nav").remove()
 	$('#navPanel').remove()
 	$('#navPanelToggle').remove()

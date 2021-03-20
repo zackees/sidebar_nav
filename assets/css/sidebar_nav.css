@@ -77,7 +77,6 @@
 
 	#navPanelToggle:before {
 		content: '\f0c9';
-		margin-right: 0.9rem;
 	}
 
 	#navPanelToggle.alt:hover {
