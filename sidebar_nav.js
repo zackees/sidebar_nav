@@ -222,7 +222,7 @@ function init_navpanel(menu_name, html) {
 		$wrapper = $('#navpanel_opacity_wrapper'),
 		//$nav = $('#__nav'),
 		$main = $('#main'),
-		$navPanelToggle, $navPanel, $navPanelInner;
+		$navPanel, $navPanelInner;
 	if (menu_name.length) {
 		menu_name = ' ' + menu_name
 	}	
@@ -231,11 +231,8 @@ function init_navpanel(menu_name, html) {
 	$('#navPanelToggle').remove()
 	$nav = $('<nav id="__nav"></nav>').appendTo($wrapper)
 	// Nav Panel.
-	// Toggle.
-	$navPanelToggle = $(
-		'<a href="#navPanel" id="navPanelToggle">'+menu_name+'</a>'
-	)
-	.appendTo($wrapper);
+	// Create slide out navigation pane.
+	$('<a href="#navPanel" id="navPanelToggle">'+menu_name+'</a>').appendTo($wrapper);
 
 	// Panel.
 	$navPanel = $(
