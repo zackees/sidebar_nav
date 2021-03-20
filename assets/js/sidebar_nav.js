@@ -230,8 +230,6 @@
 	)
 		.appendTo($wrapper);
 
-	$navPanelToggle.addClass('alt');
-
 	// Panel.
 	$navPanel = $(
 		'<div id="navPanel">' +
