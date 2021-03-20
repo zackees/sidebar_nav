@@ -197,7 +197,7 @@
 })(jQuery);
 
 
-function init_navpanel() {
+function init_navpanel(menu_name) {
 	var $window = $(window),
 		$body = $('body'),
 		$wrapper = $('#wrapper'),
@@ -208,7 +208,7 @@ function init_navpanel() {
 	// Nav Panel.
 	// Toggle.
 	$navPanelToggle = $(
-		'<a href="#navPanel" id="navPanelToggle">Menu</a>'
+		'<a href="#navPanel" id="navPanelToggle">'+menu_name+'</a>'
 	)
 	.appendTo($wrapper);
 
@@ -250,5 +250,5 @@ function init_navpanel() {
 }
 
 (function ($) {
-	init_navpanel()
+	init_navpanel("Menu")
 })(jQuery);
