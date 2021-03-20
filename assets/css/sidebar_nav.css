@@ -12,10 +12,6 @@
 		overflow: hidden;
 	}
 
-	#wrapper > .bg {
-		z-index: -1;
-	}
-
 	#wrapper.fade-in:before {
 		pointer-events: none;
 		-moz-transition: opacity 1s ease-in-out;
