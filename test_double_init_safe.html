@@ -15,6 +15,7 @@
 		<p>Tests that double initializing is ok</p>
 		<p>The test passes if the navigation panel says "Menu"</p>
 		<p>The test fails if the navigation says anything else or is missing.</p>
+		<p>The test fails if the navigation panel is empty of links</p>
 	</div>
 
 	<!-- Scripts -->
@@ -30,10 +31,10 @@
 				<li><a href="#">Link 3</a></li>
 				<li><a href="#">Link 4</a></li>
 			</ul>`
-		init_navpanel("Menu", html)
+		init_sidebar_nav("Menu", html)
 
-		// Test that this second init_navpanl has no effect.
-		init_navpanel("Something else", '')
+		// Test that this second init_sidebar_nav has no effect.
+		init_sidebar_nav("Something else", '')
 	</script>
 
 </body>

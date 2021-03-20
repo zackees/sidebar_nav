@@ -197,7 +197,7 @@
 })(jQuery);
 
 
-function set_navpanel(html) {
+function set_sidebar_nav(html) {
 	let $nav = $('#__nav')
 	let $navPanel = $('#navPanel')
 	let $navPanelInner = $navPanel.children('nav')
@@ -212,7 +212,7 @@ function set_navpanel(html) {
 }
 
 var __sidebar_initialized = false
-function init_navpanel(menu_name, html) {
+function init_sidebar_nav(menu_name, html) {
 	if (__sidebar_initialized) {
 		console.log('init_navpanel(...) already called. skipping.')
 		return
@@ -253,6 +253,6 @@ function init_navpanel(menu_name, html) {
 			target: $body,
 			visibleClass: 'is-navPanel-visible'
 		});
-	set_navpanel(html)
+	set_sidebar_nav(html)
 }
 

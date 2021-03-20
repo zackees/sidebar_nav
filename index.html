@@ -10,8 +10,6 @@
 </head>
 
 <body>
-
-
 	<!-- Wrapper -->
 	<div id="navpanel_opacity_wrapper">
 		<a href="test_double_init_safe.html"><button>test_double_init_safe</button></a>
@@ -89,11 +87,11 @@
 		html_huge_list += '</ul>'
 
 		// Step two, test sending the data into the api.
-		init_navpanel("Menu", html_small_list)
+		init_sidebar_nav("Menu", html_small_list)
 
 		// Then after a 3 second delay change the text in the nav panel.
 		// This tests the navPanel scrolling.
-		setTimeout(function() {	set_navpanel(html_huge_list)}, 3000);
+		setTimeout(function() {	set_sidebar_nav(html_huge_list)}, 3000);
 	</script>
 
 </body>
