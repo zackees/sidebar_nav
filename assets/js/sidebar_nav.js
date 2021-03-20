@@ -201,9 +201,13 @@ function init_navpanel(menu_name, html) {
 	var $window = $(window),
 		$body = $('body'),
 		$wrapper = $('#wrapper'),
-		$nav = $('#nav'),
+		//$nav = $('#nav'),
 		$main = $('#main'),
 		$navPanelToggle, $navPanel, $navPanelInner;
+
+	$("#nav").remove()
+	$('#navPanel').remove()
+	$nav = $('<nav id="nav"></nav>').html(html).appendTo($wrapper)
 
 	// Nav Panel.
 	// Toggle.
@@ -211,8 +215,6 @@ function init_navpanel(menu_name, html) {
 		'<a href="#navPanel" id="navPanelToggle">'+menu_name+'</a>'
 	)
 	.appendTo($wrapper);
-
-	$('#nav').html(html)
 
 	// Panel.
 	$navPanel = $(
