@@ -80,7 +80,12 @@
 				<li><a href="#">Tucker Carlson</a></li>
 			</ul>`
 		init_navpanel("Menu", html)
-		set_navpanel('<a href="#">test</a>')
+
+		// Then after a 5 second delay change the text in the nav panel.
+		setTimeout(function() {
+			set_navpanel('<a href="#">test</a>')
+		}, 5000)
+		
 	</script>
 
 </body>
