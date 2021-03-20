@@ -10,9 +10,11 @@
 </head>
 
 <body>
+
+
 	<!-- Wrapper -->
 	<div id="navpanel_opacity_wrapper">
-		<p>This is the beginning</p>
+		<a href="test_double_init_safe.html"><button>test_double_init_safe</button></a>
 		<p>&nbsp;</p>
 		<p>&nbsp;</p>
 		<p>Opacity in the #wrapper div will change with the navigation panel</p>
@@ -71,24 +73,27 @@
 		integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 	<script src="sidebar_nav.js"></script>
 	<script type="text/javascript">
-		let html = `<h3>Links</h3>
+		// Step one create data.
+		let html_small_list = `<h3>Links</h3>
 			<ul class="links">
-				<li class="active"><a href="#">Sargon of Akkad</a></li>
-				<li><a href="#">Scott Adams</a></li>
-				<li><a href="#">Dave Rubin</a></li>
-				<li><a href="#">Tucker Carlson</a></li>
+				<li class="active"><a href="#">Link 1</a></li>
+				<li><a href="#">Link 2</a></li>
+				<li><a href="#">Link 3</a></li>
+				<li><a href="#">Link 4</a></li>
 			</ul>`
-		init_navpanel("Menu", html)
 
-		// Test that this second init_navpanl has no effect.
-		init_navpanel("Something else", '')
+		let html_huge_list = '<h3>Links</h3><ul class="links">'
+		for (i = 0; i < 100; ++i) {
+			html_huge_list += '<li><a href="#">Link ' + (i+1) + '</a></li>'
+		}
+		html_huge_list += '</ul>'
+
+		// Step two, test sending the data into the api.
+		init_navpanel("Menu", html_small_list)
 
 		// Then after a 3 second delay change the text in the nav panel.
-		setTimeout(function() {
-			let html = ''
-			for (i = 0; i < 100; ++i) { html += '<a href="#">test ' + (i+1) + '</a><br>' }
-			set_navpanel(html)
-		}, 3000)
+		// This tests the navPanel scrolling.
+		setTimeout(function() {	set_navpanel(html_huge_list)}, 3000);
 	</script>
 
 </body>

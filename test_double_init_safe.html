@@ -1,0 +1,41 @@
+<!DOCTYPE HTML>
+<html xml:lang="en" lang="en">
+
+<head>
+	<!-- Primary Meta Tags -->
+	<meta charset="utf-8" />
+	<title>Nav Side Bar Test</title>
+	<meta http-equiv="Cache-control" content="public">
+    <link rel="stylesheet" href="sidebar_nav.css" />
+</head>
+
+<body>
+	<!-- Wrapper -->
+	<div id="navpanel_opacity_wrapper">
+		<p>Tests that double initializing is ok</p>
+		<p>The test passes if the navigation panel says "Menu"</p>
+		<p>The test fails if the navigation says anything else or is missing.</p>
+	</div>
+
+	<!-- Scripts -->
+	<!-- Use CDN versions as they are likely already cached.-->
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+		integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+	<script src="sidebar_nav.js"></script>
+	<script type="text/javascript">
+		let html = `<h3>Links</h3>
+			<ul class="links">
+				<li class="active"><a href="#">Link 1</a></li>
+				<li><a href="#">Link 2</a></li>
+				<li><a href="#">Link 3</a></li>
+				<li><a href="#">Link 4</a></li>
+			</ul>`
+		init_navpanel("Menu", html)
+
+		// Test that this second init_navpanl has no effect.
+		init_navpanel("Something else", '')
+	</script>
+
+</body>
+
+</html>
