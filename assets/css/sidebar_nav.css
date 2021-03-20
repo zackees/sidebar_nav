@@ -22,7 +22,6 @@
 		-webkit-transition-delay: 0.75s;
 		-ms-transition-delay: 0.75s;
 		transition-delay: 0.75s;
-		background: #1e252d;
 		content: '';
 		display: block;
 		height: 100%;
@@ -53,18 +52,6 @@
 		overflow: hidden;
 		padding: 0 2rem 0 0;
 		position: relative;
-		width: calc(100% - 4rem);
-		max-width: 72rem;
-		z-index: 2;
-	}
-
-
-/* Main */
-
-	#main {
-		background-color: #ffffff;
-		position: relative;
-		margin: 0 auto;
 		width: calc(100% - 4rem);
 		max-width: 72rem;
 		z-index: 2;
