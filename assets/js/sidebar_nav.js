@@ -249,6 +249,3 @@ function init_navpanel(menu_name) {
 		.addClass('alt');
 }
 
-(function ($) {
-	init_navpanel("Menu")
-})(jQuery);
