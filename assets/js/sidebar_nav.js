@@ -205,29 +205,12 @@ function init_navpanel() {
 		$main = $('#main'),
 		$navPanelToggle, $navPanel, $navPanelInner;
 
-
-
-	// Play initial animations on page load.
-	/*
-	$window.on('load', function () {
-		window.setTimeout(function () {
-			$body.removeClass('is-preload');
-		}, 100);
-	});
-	*/
-
-
-
-	// Scrolly.
-	//$('.scrolly').scrolly();
-
 	// Nav Panel.
-
 	// Toggle.
 	$navPanelToggle = $(
 		'<a href="#navPanel" id="navPanelToggle">Menu</a>'
 	)
-		.appendTo($wrapper);
+	.appendTo($wrapper);
 
 	// Panel.
 	$navPanel = $(
