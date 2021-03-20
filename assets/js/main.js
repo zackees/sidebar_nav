@@ -108,18 +108,13 @@
 	// Move nav content on breakpoint change.
 	var $navContent = $nav.children();
 
-	breakpoints.on('>=xxsmall', function () {
-		// Nav -> NavPanel.
-		$navContent.appendTo($navPanelInner);
-		// Flip icon classes.
-		$navPanelInner.find('.icons, .icon')
-			.addClass('alt');
-
-	});
-
+	// Nav -> NavPanel.
+    $navContent.appendTo($navPanelInner);
+	// Flip icon classes.
+	$navPanelInner.find('.icons, .icon')
+		.addClass('alt');
 
 	// Intro.
 	var $intro = $('#intro');
-
 
 })(jQuery);
