@@ -203,7 +203,7 @@ function sidebar_nav_had_error() {
 	return __sidebar_error_in_init
 }
 
-function set_sidebar_nav(html) {
+function sidebar_nav_set(html) {
 	if (!__sidebar_initialized) {
 		console.log('set_sidebar_nav(...): Error init_sidebar_nav(...) not called first')
 		return
@@ -277,6 +277,6 @@ function sidebar_nav_init(menu_name, html) {
 			target: $body,
 			visibleClass: 'is-navPanel-visible'
 		});
-	set_sidebar_nav(html)
+	sidebar_nav_set(html)
 }
 

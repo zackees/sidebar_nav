@@ -43,10 +43,10 @@ makes a dead simple API to use this sidebar nav panel.
 				<li><a href="#">Link 3</a></li>
 				<li><a href="#">Link 4</a></li>
 			</ul>`
-		init_sidebar_nav("Menu", html)
+		sidebar_nav_init("Menu", html)
 
-		// Test that this second init_sidebar_nav has no effect.
-		init_sidebar_nav("Something else", '')
+        // Then optionally later call.
+		// sidebar_nav_set('<p>Test</p>')
 	</script>
 
 </body>
@@ -56,8 +56,9 @@ makes a dead simple API to use this sidebar nav panel.
 
 # API
   * The following Javascript functions are available:
-    * `init_sidebar_nav(title_str, html_str)`
-    * `set_sidebar_nav(html_str)`
+    * `sidebar_nav_init(title_str, html_str)`
+    * `sidebar_nav_set(html_str)`
+    * `sidebar_nav_error()` returns true if there was an error.
   * Your html document must include a div with the id as `side_panel_opacity_wrapper`.
     * Example: 	<div id="side_panel_opacity_wrapper">My test</div>
       * In this example the words "My test" will have a slick opacity effect applied. Other divs will not.
