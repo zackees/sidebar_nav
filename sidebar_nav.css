@@ -158,7 +158,7 @@
 
 /* Nav Panel */
 
-	#__sidebarPanelToggle {
+	#__sidebarFloatingPane {
 		text-decoration: none;
 		-moz-transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 		-webkit-transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
@@ -181,7 +181,7 @@
 		z-index: 10001;
 	}
 
-	#__sidebarPanelToggle:before {
+	#__sidebarFloatingPane:before {
 		-moz-osx-font-smoothing: grayscale;
 		-webkit-font-smoothing: antialiased;
 		display: inline-block;
@@ -196,16 +196,16 @@
 		margin-right: 0.9rem;
 	}
 
-	#__sidebarPanelToggle:hover {
+	#__sidebarFloatingPane:hover {
 		background-color: #fff4e1;
 	}
 
-	#__sidebarPanelToggle {
+	#__sidebarFloatingPane {
 		display: block;
 	}
 
 	@media screen and (max-width: 736px) {
-		#__sidebarPanelToggle {
+		#__sidebarFloatingPane {
 			font-size: 2.0rem;
 			padding: 0.25rem 1rem;
 		}

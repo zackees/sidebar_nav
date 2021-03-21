@@ -252,12 +252,12 @@ function sidebar_nav_init(menu_name, html) {
 	/* work in progress for trying to allow sidebar_nav_init() to be called twice.
 	$("#__sidebar").remove()
 	$('#__sidebarPanel').remove()
-	$('#__sidebarPanelToggle').remove()
+	$('#__sidebarFloatingPane').remove()
 	*/
 	$nav = $('<nav id="__sidebar"></nav>').appendTo($wrapper)
 	// Nav Panel.
 	// Create slide out navigation pane.
-	$('<a href="#__sidebarPanel" id="__sidebarPanelToggle">'+menu_name+'</a>').appendTo($wrapper);
+	$('<a href="#__sidebarPanel" id="__sidebarFloatingPane">'+menu_name+'</a>').appendTo($wrapper);
 
 	// Panel.
 	$navPanel = $(

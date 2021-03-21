@@ -24,7 +24,7 @@ This project is based on the [Massively demo](https://html5up.net/massively) pro
   * Hidden dom elements are attached to the current html document.
     * `div` with id `#__sidebar`
 	* `div` with id `#__sidebarPanel`
-	*` div` with id `#__sidebarPanelToggle`
+	* `div` with id `#__sidebarFloatingPane`
   * Additionally the <body> element will have the class `is-sidebar-visible` toggled depending on visibility of the navigation pane.
 
 # Test
