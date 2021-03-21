@@ -12,7 +12,8 @@
 <body>
 	<!-- Wrapper -->
 	<div>
-		<p>This test passes if the Menu button can be seen.</p>
+		<p>This test passes if there is NOT an alert.</p>
+		<p>This test is missing a div #side_panel_opacity_wrapper</p>
 	</div>
 	
 
@@ -22,12 +23,12 @@
 		integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 	<script src="sidebar_nav.js"></script>
 	<script type="text/javascript">
-		let html_small_list = ```
-			<h3>Links</h3>
-			<ul class="links">
-				<li><a href="#">Link 1</a></li>
-			</ul>```
-		init_sidebar_nav("Menu", html_small_list)
+		let html_small_list = '<h3>Links</h3><ul class="links"><li><a href="#">Link 1</a></li></ul>'
+		sidebar_nav_init("Menu", html_small_list)
+
+		if (!sidebar_nav_error()) {
+			alert("Expected error but there was none.")
+		}
 	</script>
 
 </body>

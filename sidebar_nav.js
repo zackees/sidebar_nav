@@ -199,12 +199,16 @@
 var __sidebar_initialized = false
 var __sidebar_error_in_init = false
 
+function sidebar_nav_had_error() {
+	return __sidebar_error_in_init
+}
+
 function set_sidebar_nav(html) {
-	if (!__sidebar_error_in_init) {
+	if (!__sidebar_initialized) {
 		console.log('set_sidebar_nav(...): Error init_sidebar_nav(...) not called first')
 		return
 	}
-	if (!__sidebar_error_in_init) {
+	if (__sidebar_error_in_init) {
 		console.log('set_sidebar_nav(...): Error encountered previously in init_sidebar_nav(...)')
 		return
 	}
@@ -222,15 +226,15 @@ function set_sidebar_nav(html) {
 }
 
 
-function init_sidebar_nav(menu_name, html) {
+function sidebar_nav_init(menu_name, html) {
 	if (__sidebar_initialized) {
-		console.log('init_navpanel(...) already called. skipping.')
+		console.log('sidebar_nav_init(...) already called. skipping.')
 		return
 	}
 	__sidebar_initialized = true
 	if (!document.body) {
 		__sidebar_error_in_init = true
-		console.log("init_navpanel(...) error - no <body> element")
+		console.log("sidebar_nav_init(...) error - no <body> element")
 		return
 	}
 	if (!document.getElementById('side_panel_opacity_wrapper')) {
