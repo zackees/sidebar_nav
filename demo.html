@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html xml:lang="en" lang="en">
+
+<head>
+	<!-- Primary Meta Tags -->
+	<meta charset="utf-8" />
+	<title>Nav Side Bar Test</title>
+	<meta http-equiv="Cache-control" content="public">
+    <link rel="stylesheet" href="sidebar_nav.css" />
+</head>
+
+<body>
+	<!-- Wrapper -->
+	<div id="side_panel_opacity_wrapper">
+		<p>Text at the top</p>
+		<br>
+		<p>Opacity in the #side_panel_opacity_wrapper div will change with the navigation panel</p>
+		<br><br><br><br><br><br><br><br>
+		<p>Middle</p>		
+		<br><br><br><br><br><br><br><br>
+		<p>End</p>
+		<p>After this there is not click events</p>
+	</div>
+
+	<!-- sidebar nav requries jquery and sidebar_nav.js -->
+	<!-- Use CDN versions as they are likely already cached.-->
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+		integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+	<script src="sidebar_nav.js"></script>
+	<script type="text/javascript">
+		// Step one create data.
+		let html_small_list = `<h3>Links</h3>
+			<ul class="links">
+				<li><a href="#">Link 1</a></li>
+				<li><a href="#">Link 2</a></li>
+			</ul>`
+		sidebar_nav_init("Menu", html_small_list)
+	</script>
+
+</body>
+
+</html>
