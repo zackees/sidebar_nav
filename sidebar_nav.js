@@ -196,8 +196,18 @@
 	};
 })(jQuery);
 
+var __sidebar_initialized = false
+var __sidebar_error_in_init = false
 
 function set_sidebar_nav(html) {
+	if (!__sidebar_error_in_init) {
+		console.log('set_sidebar_nav(...): Error init_sidebar_nav(...) not called first')
+		return
+	}
+	if (!__sidebar_error_in_init) {
+		console.log('set_sidebar_nav(...): Error encountered previously in init_sidebar_nav(...)')
+		return
+	}
 	let $nav = $('#__nav')
 	let $navPanel = $('#navPanel')
 	let $navPanelInner = $navPanel.children('nav')
@@ -211,13 +221,23 @@ function set_sidebar_nav(html) {
 		.addClass('alt');
 }
 
-var __sidebar_initialized = false
+
 function init_sidebar_nav(menu_name, html) {
 	if (__sidebar_initialized) {
 		console.log('init_navpanel(...) already called. skipping.')
 		return
 	}
 	__sidebar_initialized = true
+	if (!document.body) {
+		__sidebar_error_in_init = true
+		console.log("init_navpanel(...) error - no <body> element")
+		return
+	}
+	if (!document.getElementById('side_panel_opacity_wrapper')) {
+		__sidebar_error_in_init = true
+		console.log("init_navpanel(...) error - no <div id=\"side_panel_opacity_wrapper\"></div>")
+		return
+	}
 	var $window = $(window),
 		$body = $('body'),
 		$wrapper = $('#side_panel_opacity_wrapper'),
