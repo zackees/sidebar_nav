@@ -17,8 +17,8 @@ This project is based on the [Massively demo](https://html5up.net/massively) pro
 
 # HTML setup
   * Your html document must include a div with the id as `sidebar_nav_opacity_pane`.
-    * Example: 	<div id="sidebar_nav_opacity_pane">My test</div>
-      * In this example the words "My test" will have a slick opacity effect applied. Other divs will not.
+    * Example: `<div id="sidebar_nav_opacity_pane">My test</div>`
+      * In this example the words "My test" will have a slick opacity effect applied. Clicking on this div while the sidebar navigation panel is in an open state, will close it. Other divs will NOT have their opacity changed nor will they act as click targets to dismiss an open nav panel.
 
 # Internals
   * Hidden dom elements are attached to the current html document.
