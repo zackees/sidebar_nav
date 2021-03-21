@@ -237,14 +237,14 @@ function sidebar_nav_init(menu_name, html) {
 		console.log("sidebar_nav_init(...) error - no <body> element")
 		return
 	}
-	if (!document.getElementById('side_panel_opacity_wrapper')) {
+	if (!document.getElementById('sidebar_nav_opacity_pane')) {
 		__sidebar_error_in_init = true
-		console.log("init_navpanel(...) error - no <div id=\"side_panel_opacity_wrapper\"></div>")
+		console.log("init_navpanel(...) error - no <div id=\"sidebar_nav_opacity_pane\"></div>")
 		return
 	}
 	var $window = $(window),
 		$body = $('body'),
-		$wrapper = $('#side_panel_opacity_wrapper'),
+		$wrapper = $('#sidebar_nav_opacity_pane'),
 		$navPanel, $navPanelInner;
 	if (menu_name.length) {
 		menu_name = ' ' + menu_name

@@ -16,15 +16,15 @@ This project is based on the [Massively demo](https://html5up.net/massively) pro
     * `sidebar_nav_error()` returns true if there was an error.
 
 # HTML setup
-  * Your html document must include a div with the id as `side_panel_opacity_wrapper`.
-    * Example: 	<div id="side_panel_opacity_wrapper">My test</div>
+  * Your html document must include a div with the id as `sidebar_nav_opacity_pane`.
+    * Example: 	<div id="sidebar_nav_opacity_pane">My test</div>
       * In this example the words "My test" will have a slick opacity effect applied. Other divs will not.
 
 # Internals
   * Hidden dom elements are attached to the current html document.
-    * `#__sidebar`
-	* `#__sidebarPanel`
-	* `#__sidebarPanelToggle`
+    * `div` with id `#__sidebar`
+	* `div` with id `#__sidebarPanel`
+	*` div` with id `#__sidebarPanelToggle`
   * Additionally the <body> element will have the class `is-sidebar-visible` toggled depending on visibility of the navigation pane.
 
 # Test

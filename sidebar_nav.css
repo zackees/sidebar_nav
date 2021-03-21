@@ -2,7 +2,7 @@
 
 
   /* This is needed because of color control in the scene */
-	#side_panel_opacity_wrapper {
+	#sidebar_nav_opacity_pane {
 		-moz-transition: opacity 0.5s ease;
 		-webkit-transition: opacity 0.5s ease;
 		-ms-transition: opacity 0.5s ease;
@@ -334,7 +334,7 @@
 			padding: 2.5rem 1.75rem;
 		}
 	}
-	body.is-sidebar-visible #side_panel_opacity_wrapper {
+	body.is-sidebar-visible #sidebar_nav_opacity_pane {
 		opacity: 0.5; /* Controls opacity of canvas below */
 	}
 	/* Physically slides the nav into view */
