@@ -45,7 +45,7 @@ makes a dead simple API to use this sidebar nav panel.
 			</ul>`
 		sidebar_nav_init("Menu", html)
 
-		// Then optionallyyou can later call
+		// Then optionally you can call this to change the data.
 		// sidebar_nav_set('<p>Test</p>')
 	</script>
 
@@ -68,4 +68,6 @@ makes a dead simple API to use this sidebar nav panel.
   * Or use the VSCode build tool `run_server`
     * Then open up `http://localhost:8000` in a browser
       * Run test.
-    * Also run test in `http://localhost:8000/test_double_init_safe.html`
+    * Other tests:
+      * [http://localhost:8000/test_double_init_safe.html](http://localhost:8000/test_double_init_safe.html)
+      * [http://localhost:8000/test_no_opacity_wrapper.html](http://localhost:8000/test_no_opacity_wrapper.html)
