@@ -205,11 +205,11 @@ function sidebar_nav_had_error() {
 
 function sidebar_nav_set(html) {
 	if (!__sidebar_initialized) {
-		console.log('set_sidebar_nav(...): Error init_sidebar_nav(...) not called first')
+		console.log('sidebar_nav_set(...): Error sidebar_nav_init(...) not called first')
 		return
 	}
 	if (__sidebar_error_in_init) {
-		console.log('set_sidebar_nav(...): Error encountered previously in init_sidebar_nav(...)')
+		console.log('sidebar_nav_set(...): Error encountered previously in sidebar_nav_init(...)')
 		return
 	}
 	let $nav = $('#__nav')
