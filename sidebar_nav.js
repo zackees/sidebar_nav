@@ -212,8 +212,8 @@ function sidebar_nav_set(html) {
 		console.log('sidebar_nav_set(...): Error encountered previously in sidebar_nav_init(...)')
 		return
 	}
-	let $nav = $('#__nav')
-	let $navPanel = $('#__navPanel')
+	let $nav = $('#__sidebar')
+	let $navPanel = $('#__sidebarPanel')
 	let $navPanelInner = $navPanel.children('nav')
 	$navPanelInner.empty()
 	$nav.html(html)
@@ -250,20 +250,20 @@ function sidebar_nav_init(menu_name, html) {
 		menu_name = ' ' + menu_name
 	}
 	/* work in progress for trying to allow sidebar_nav_init() to be called twice.
-	$("#__nav").remove()
-	$('#__navPanel').remove()
-	$('#__navPanelToggle').remove()
+	$("#__sidebar").remove()
+	$('#__sidebarPanel').remove()
+	$('#__sidebarPanelToggle').remove()
 	*/
-	$nav = $('<nav id="__nav"></nav>').appendTo($wrapper)
+	$nav = $('<nav id="__sidebar"></nav>').appendTo($wrapper)
 	// Nav Panel.
 	// Create slide out navigation pane.
-	$('<a href="#__navPanel" id="__navPanelToggle">'+menu_name+'</a>').appendTo($wrapper);
+	$('<a href="#__sidebarPanel" id="__sidebarPanelToggle">'+menu_name+'</a>').appendTo($wrapper);
 
 	// Panel.
 	$navPanel = $(
-		'<div id="__navPanel">' +
+		'<div id="__sidebarPanel">' +
 		  '<nav></nav>' +
-		  '<a href="#__navPanel" class="close"></a>' +
+		  '<a href="#__sidebarPanel" class="close"></a>' +
 		'</div>'
 	)
 		.appendTo($body)

@@ -22,9 +22,9 @@ This project is based on the [Massively demo](https://html5up.net/massively) pro
 
 # Internals
   * Hidden dom elements are attached to the current html document.
-    * `#__nav`
-	* `#__navPanel`
-	* `#__navPanelToggle`
+    * `#__sidebar`
+	* `#__sidebarPanel`
+	* `#__sidebarPanelToggle`
   * Additionally the <body> element will have the class `is-navPanel-visible` toggled depending on visibility of the navigation pane.
 
 # Test
