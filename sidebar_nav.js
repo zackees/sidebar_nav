@@ -213,7 +213,7 @@ function sidebar_nav_set(html) {
 		return
 	}
 	let $nav = $('#__nav')
-	let $navPanel = $('#navPanel')
+	let $navPanel = $('#__navPanel')
 	let $navPanelInner = $navPanel.children('nav')
 	$navPanelInner.empty()
 	$nav.html(html)
@@ -251,19 +251,19 @@ function sidebar_nav_init(menu_name, html) {
 	}
 	/* work in progress for trying to allow sidebar_nav_init() to be called twice.
 	$("#__nav").remove()
-	$('#navPanel').remove()
-	$('#navPanelToggle').remove()
+	$('#__navPanel').remove()
+	$('#__navPanelToggle').remove()
 	*/
 	$nav = $('<nav id="__nav"></nav>').appendTo($wrapper)
 	// Nav Panel.
 	// Create slide out navigation pane.
-	$('<a href="#navPanel" id="navPanelToggle">'+menu_name+'</a>').appendTo($wrapper);
+	$('<a href="#__navPanel" id="__navPanelToggle">'+menu_name+'</a>').appendTo($wrapper);
 
 	// Panel.
 	$navPanel = $(
-		'<div id="navPanel">' +
+		'<div id="__navPanel">' +
 		  '<nav></nav>' +
-		  '<a href="#navPanel" class="close"></a>' +
+		  '<a href="#__navPanel" class="close"></a>' +
 		'</div>'
 	)
 		.appendTo($body)

@@ -20,7 +20,12 @@ This project is based on the [Massively demo](https://html5up.net/massively) pro
     * Example: 	<div id="side_panel_opacity_wrapper">My test</div>
       * In this example the words "My test" will have a slick opacity effect applied. Other divs will not.
 
-
+# Internals
+  * Hidden dom elements are attached to the current html document.
+    * `#__nav`
+	* `#__navPanel`
+	* `#__navPanelToggle`
+  * Additionally the <body> element will have the class `is-navPanel-visible` toggled depending on visibility of the navigation pane.
 
 # Test
   * Launch simple test server using python: `python3 -m http.server`

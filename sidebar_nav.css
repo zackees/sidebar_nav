@@ -158,7 +158,7 @@
 
 /* Nav Panel */
 
-	#navPanelToggle {
+	#__navPanelToggle {
 		text-decoration: none;
 		-moz-transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 		-webkit-transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
@@ -181,7 +181,7 @@
 		z-index: 10001;
 	}
 
-	#navPanelToggle:before {
+	#__navPanelToggle:before {
 		-moz-osx-font-smoothing: grayscale;
 		-webkit-font-smoothing: antialiased;
 		display: inline-block;
@@ -196,22 +196,22 @@
 		margin-right: 0.9rem;
 	}
 
-	#navPanelToggle.alt:hover {
+	#__navPanelToggle.alt:hover {
 		background-color: #ffffff;
 	}
 
-	#navPanelToggle {
+	#__navPanelToggle {
 		display: block;
 	}
 
 	@media screen and (max-width: 736px) {
-		#navPanelToggle {
+		#__navPanelToggle {
 			font-size: 2.0rem;
 			padding: 0.25rem 1rem;
 		}
 	}
 
-	#navPanel {
+	#__navPanel {
 		-moz-transform: translateX(20rem);
 		-webkit-transform: translateX(20rem);
 		-ms-transform: translateX(20rem);
@@ -237,7 +237,7 @@
 		z-index: 10002;
 	}
 
-	#navPanel h1, h2, h3, h4, h5, h6 {
+	#__navPanel h1, h2, h3, h4, h5, h6 {
 		font-family: "Source Sans Pro", Helvetica, sans-serif;
 		font-weight: 900;
 		line-height: 1.5;
@@ -246,23 +246,23 @@
 		margin: 0 0 1rem 0;
 	}
 
-	#navPanel a {
+	#__navPanel a {
 			border-bottom: 0;
 			color: inherit;
 			text-decoration: none;
 		}
 
 
-	#navPanel .links {
+	#__navPanel .links {
 		list-style: none;
 		padding-left: 0;
 	}
 
-		#navPanel .links li {
+		#__navPanel .links li {
 			border-top: solid 2px #eeeeee;
 		}
 
-			#navPanel .links li a {
+			#__navPanel .links li a {
 				border-bottom: 0;
 				display: block;
 				font-family: "Source Sans Pro", Helvetica, sans-serif;
@@ -274,11 +274,11 @@
 				text-transform: uppercase;
 			}
 
-			#navPanel .links li:first-child {
+			#__navPanel .links li:first-child {
 				border-top: 0;
 			}
 
-	#navPanel .close {
+	#__navPanel .close {
 		text-decoration: none;
 		-moz-transition: color 0.2s ease-in-out;
 		-webkit-transition: color 0.2s ease-in-out;
@@ -299,7 +299,7 @@
 		vertical-align: middle;
 		width: 7rem;
 	}
-	#navPanel .close:before {
+	#__navPanel .close:before {
 		-moz-osx-font-smoothing: grayscale;
 		-webkit-font-smoothing: antialiased;
 		display: inline-block;
@@ -314,23 +314,23 @@
 		font-size: 1.25rem;
 	}
 
-	#navPanel .close:hover {
+	#__navPanel .close:hover {
 		color: #212931;
 	}
 	@media screen and (max-width: 736px) {
-		#navPanel .close {
+		#__navPanel .close {
 			height: 4rem;
 			line-height: 4rem;
 		}
 	}
-	#navPanel {
+	#__navPanel {
 		display: block;
 	}
 
 
 
 	@media screen and (max-width: 736px) {
-		#navPanel {
+		#__navPanel {
 			padding: 2.5rem 1.75rem;
 		}
 	}
@@ -338,7 +338,7 @@
 		opacity: 0.5; /* Controls opacity of canvas below */
 	}
 	/* Physically slides the nav into view */
-	body.is-navPanel-visible #navPanel {
+	body.is-navPanel-visible #__navPanel {
 		-moz-transform: translateX(0);
 		-webkit-transform: translateX(0);
 		-ms-transform: translateX(0);
