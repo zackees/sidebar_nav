@@ -196,8 +196,8 @@
 		margin-right: 0.9rem;
 	}
 
-	#__sidebarPanelToggle.alt:hover {
-		background-color: #ffffff;
+	#__sidebarPanelToggle:hover {
+		background-color: #fff4e1;
 	}
 
 	#__sidebarPanelToggle {
