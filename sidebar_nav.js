@@ -245,15 +245,15 @@ function sidebar_nav_init(menu_name, html) {
 	var $window = $(window),
 		$body = $('body'),
 		$wrapper = $('#side_panel_opacity_wrapper'),
-		//$nav = $('#__nav'),
-		$main = $('#main'),
 		$navPanel, $navPanelInner;
 	if (menu_name.length) {
 		menu_name = ' ' + menu_name
-	}	
+	}
+	/* work in progress for trying to allow sidebar_nav_init() to be called twice.
 	$("#__nav").remove()
 	$('#navPanel').remove()
 	$('#navPanelToggle').remove()
+	*/
 	$nav = $('<nav id="__nav"></nav>').appendTo($wrapper)
 	// Nav Panel.
 	// Create slide out navigation pane.
