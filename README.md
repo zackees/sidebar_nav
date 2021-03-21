@@ -30,7 +30,7 @@ makes a dead simple API to use this sidebar nav panel.
 		<p>The test fails if the navigation panel is empty of links</p>
 	</div>
 
-	<!-- Scripts -->
+	<!-- sidebar nav requries jquery and sidebar_nav.js -->
 	<!-- Use CDN versions as they are likely already cached.-->
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js"
 		integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
@@ -45,7 +45,7 @@ makes a dead simple API to use this sidebar nav panel.
 			</ul>`
 		sidebar_nav_init("Menu", html)
 
-        // Then optionally later call.
+		// Then optionallyyou can later call
 		// sidebar_nav_set('<p>Test</p>')
 	</script>
 

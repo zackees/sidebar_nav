@@ -12,12 +12,13 @@
 <body>
 	<!-- Wrapper -->
 	<div>
-		<p>This test passes if there is NOT an alert.</p>
-		<p>This test is missing a div #side_panel_opacity_wrapper</p>
+		<p>This test checks the behavior of not having a div with id #side_panel_opacity_wrapper</p>
+		<p>This will generate an error.</p>
+		<p>A javascript alert dialog will pop up if there is NO error</p>
+		<p>Therefore, this test passes if there is NOT an alert.</p>
 	</div>
-	
 
-	<!-- Scripts -->
+	<!-- sidebar nav requries jquery and sidebar_nav.js -->
 	<!-- Use CDN versions as they are likely already cached.-->
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js"
 		integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
@@ -25,7 +26,6 @@
 	<script type="text/javascript">
 		let html_small_list = '<h3>Links</h3><ul class="links"><li><a href="#">Link 1</a></li></ul>'
 		sidebar_nav_init("Menu", html_small_list)
-
 		if (!sidebar_nav_error()) {
 			alert("Expected error but there was none.")
 		}
