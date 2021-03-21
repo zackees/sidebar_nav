@@ -25,7 +25,7 @@ This project is based on the [Massively demo](https://html5up.net/massively) pro
     * `div` with id `#__sidebar`
 	* `div` with id `#__sidebarPanel`
 	* `div` with id `#__sidebarFloatingPane`
-  * Additionally the <body> element will have the class `is-sidebar-visible` toggled depending on visibility of the navigation pane.
+  * Additionally the `<body>` element will have the class `is-sidebar-visible` toggled depending on visibility of the navigation pane.
 
 # Test
   * Launch simple test server using python: `python3 -m http.server`
