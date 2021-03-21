@@ -275,7 +275,7 @@ function sidebar_nav_init(menu_name, html) {
 			resetForms: true,
 			side: 'right',
 			target: $body,
-			visibleClass: 'is-navPanel-visible'
+			visibleClass: 'is-sidebar-visible'
 		});
 	sidebar_nav_set(html)
 }
