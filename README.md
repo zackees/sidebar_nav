@@ -1,12 +1,12 @@
 
+# Live demo
+  * General usage demo: [https://zackees.github.io/sidebar_nav/](https://zackees.github.io/sidebar_nav/)
+
 # About
 
-You want a great nav panel that works everywhere. The problem is that this is hard.
+You want a great nav panel that works across devices (desktop, iphone, android). The problem is that this is a hard problem and has a steep learning curve. This project makes getting something up and running fast extremely easy.
 
-[Massively demo](https://html5up.net/massively) has a wonderful navigation system,
-but ripping out just the nav part turns out to be a serious undertaking. This project
-extracts the navigation bar from massively and removes the tangle of dependencies and
-makes a dead simple API to use this sidebar nav panel.
+This project is based on the [Massively demo](https://html5up.net/massively) project, which has a wonderful navigation system, but isolating just the nav part turns out to be a serious undertaking. This project  extracts the navigation bar from massively and removes the dependencies and makes a dead simple API to use this sidebar nav panel.
 
 # API
   * The following Javascript functions are available:
