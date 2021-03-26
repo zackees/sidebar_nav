@@ -14,6 +14,7 @@ This project is based on the [Massively demo](https://html5up.net/massively) pro
     * `sidebar_nav_init(title_str, html_str)`
     * `sidebar_nav_set(html_str)`
     * `sidebar_nav_error()` returns true if there was an error.
+    * `sidebar_nav_hide()` hides the navbar.
 
 # HTML setup
   * Your html document must include a div with the id as `sidebar_nav_opacity_pane`.
