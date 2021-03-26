@@ -196,9 +196,12 @@
 		margin-right: 0.9rem;
 	}
 
+	/*
+	// TODO fix.
 	#__sidebarFloatingPane:hover {
 		background-color: #fff4e1;
 	}
+	*/
 
 	#__sidebarFloatingPane {
 		display: block;

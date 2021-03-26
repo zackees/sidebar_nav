@@ -1,3 +1,7 @@
+function __side_bar_hide_function() {
+	// Default will be replaced later during initialization.
+}
+
 (function ($) {
 	/**
 	 * Panel-ify an element.
@@ -75,6 +79,9 @@
 					});
 				}
 			}, config.delay);
+		};
+		__side_bar_hide_function = function() {
+			console.log('HIDING----'); $this._hide()
 		};
 		// Vendor fixes.
 		$this
@@ -198,6 +205,12 @@
 
 var __sidebar_initialized = false
 var __sidebar_error_in_init = false
+
+function sidebar_nav_hide() {
+	if (__sidebar_initialized) {
+		__side_bar_hide_function()
+	}
+}
 
 function sidebar_nav_had_error() {
 	return __sidebar_error_in_init
