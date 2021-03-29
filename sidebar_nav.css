@@ -35,6 +35,7 @@
 		width: calc(100% - 4rem);
 		max-width: 72rem;
 		z-index: 2;
+		pointer-events: none;
 	}
 
 	#__sidebar ul.divided li {
